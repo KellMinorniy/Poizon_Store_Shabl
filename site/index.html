@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.png') }}" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <title>Margiela Service</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) {
+          return;
+        }
+      }
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(
+      window,
+      document,
+      "script",
+      "https://mc.yandex.ru/metrika/tag.js",
+      "ym"
+    );
+
+    ym(97023579, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+    });
+  </script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/97023579" style="position: absolute; left: -9999px" alt="" />
+    </div>
+  </noscript>
+  <header>
+    
+    <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo" class="header-logo" />
+    <nav class="header-nav">
+      <a href="#main" class="header-nav-item">Главная</a>
+      <a href="#promotion" class="header-nav-item">Акция</a>
+      <a href="#stages" class="header-nav-item">Оформление заказа</a>
+      <a href="#calc" class="header-nav-item">Калькулятор стоимости</a>
+      <a href="#products" class="header-nav-item">Товары в Москве</a>
+      <a href="#sizes" class="header-nav-item">Таблица размеров</a>
+    </nav>
+    <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="header-link">
+      Сделать заказ
+      <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+          fill="#fff" />
+      </svg>
+    </a>
+    <div class="burger-btn">
+      <img class="burger-btn-img" src="{{ url_for('static', filename='assets/burger.png') }}" alt="" />
+    </div>
+  </header>
+  <div class="menu-mobile">
+    <a href="#main" class="menu-mobile-item">Главная</a>
+    <a href="#promotion" class="menu-mobile-item">Акция</a>
+    <a href="#stages" class="menu-mobile-item">Оформление заказа</a>
+    <a href="#calc" class="menu-mobile-item">Кальулятор стоимости</a>
+    <a href="#products" class="menu-mobile-item">Товары в Москве</a>
+    <a href="#sizes" class="menu-mobile-item">Таблица размеров</a>
+    <a target="_blank" href="https://t.me/+eMhI8MrjiDA4Zjg0"
+      class="header-link header-link-mobile"="ym(97023579,'reachGoal','322'); return true;">
+      Сделать заказ
+      <svg width="14" height="12" viewBox="0 0 14 12" fill="none"  xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+          fill="#fff" />
+      </svg>
+    </a>
+  </div>
+  <main>
+    <div id="main" class="hero">
+      <div class="hero-content">
+        <div class="hero-label">
+          Margiela Service
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="hero-label-svg">
+            <path
+              d="M21.56 10.7401L20.2 9.16006C19.94 8.86006 19.73 8.30006 19.73 7.90006V6.20006C19.73 5.14006 18.86 4.27006 17.8 4.27006H16.1C15.71 4.27006 15.14 4.06006 14.84 3.80006L13.26 2.44006C12.57 1.85006 11.44 1.85006 10.74 2.44006L9.17 3.81006C8.87 4.06006 8.3 4.27006 7.91 4.27006H6.18C5.12 4.27006 4.25 5.14006 4.25 6.20006V7.91006C4.25 8.30006 4.04 8.86006 3.79 9.16006L2.44 10.7501C1.86 11.4401 1.86 12.5601 2.44 13.2501L3.79 14.8401C4.04 15.1401 4.25 15.7001 4.25 16.0901V17.8001C4.25 18.8601 5.12 19.7301 6.18 19.7301H7.91C8.3 19.7301 8.87 19.9401 9.17 20.2001L10.75 21.5601C11.44 22.1501 12.57 22.1501 13.27 21.5601L14.85 20.2001C15.15 19.9401 15.71 19.7301 16.11 19.7301H17.81C18.87 19.7301 19.74 18.8601 19.74 17.8001V16.1001C19.74 15.7101 19.95 15.1401 20.21 14.8401L21.57 13.2601C22.15 12.5701 22.15 11.4301 21.56 10.7401ZM16.68 12.0001L15.51 15.5601C15.36 16.1501 14.73 16.6301 14.09 16.6301H12.24C11.92 16.6301 11.47 16.5201 11.27 16.3201L9.8 15.1701C9.77 15.8101 9.48001 16.0801 8.77001 16.0801H8.29C7.55 16.0801 7.25 15.7901 7.25 15.0901V10.3101C7.25 9.61006 7.55 9.32006 8.29 9.32006H8.78C9.52 9.32006 9.82 9.61006 9.82 10.3101V10.6701L11.76 7.79006C11.96 7.48006 12.47 7.26006 12.9 7.43006C13.37 7.59006 13.67 8.11006 13.57 8.57006L13.33 10.1301C13.31 10.2701 13.34 10.4001 13.43 10.5001C13.51 10.5901 13.63 10.6501 13.76 10.6501H15.71C16.09 10.6501 16.41 10.8001 16.6 11.0701C16.77 11.3301 16.8 11.6601 16.68 12.0001Z"
+              fill="#57BFC1" />
+          </svg>
+        </div>
+        <div class="hero-title">Margiela Service - одежда с Poizon</div>
+        <div class="hero-description">
+          После ухода любимых брендов не можете найти себе обувь? Мы решим
+          вашу проблему с быстрой доставкой в любую точку страны по выгодной
+          цене
+        </div>
+      </div>
+      <div class="hero-images">
+        <img src="{{ url_for('static', filename='assets/hero-img.png') }}" class="hero-image"alt="hero-image" />
+      </div>
+    </div>
+    <div id="products" class="catalog">
+      <div class="catalog-title">
+        Товары в наличии на <b>нашем<b> складе
+      </div>
+      <div class="filters">
+        <!-- Filter by Model -->
+        <div class="filter-section">
+            <label for="model">Модель</label>
+            <div id="model-filter">
+                {% for model in models[:8] %}
+                    <div>
+                        <input type="checkbox" id="model_{{ model }}" name="model" value="{{ model }}" {% if model in request.args.get('models', '').split(',') %}checked{% endif %}>
+                        <label for="model_{{ model }}">{{ model }}</label>
+                    </div>
+                {% endfor %}
+                <button id="show-more-models">Показать все</button>
+                <div id="all-models" style="display:none;">
+                    {% for model in models[8:] %}
+                        <div>
+                            <input type="checkbox" id="model_{{ model }}" name="model" value="{{ model }}" {% if model in request.args.get('models', '').split(',') %}checked{% endif %}>
+                            <label for="model_{{ model }}">{{ model }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+        <!-- Filter by Size -->
+        <div class="filter-section">
+            <label for="size">Размер</label>
+            <div id="size-filter">
+                {% for size in sizes[:10] %}
+                    <div>
+                        <input type="checkbox" id="size_{{ size }}" name="size" value="{{ size }}" {% if size in request.args.get('sizes', '').split(',') %}checked{% endif %}>
+                        <label for="size_{{ size }}">{{ size }}</label>
+                    </div>
+                {% endfor %}
+                <button id="show-more-sizes">Показать все</button>
+                <div id="all-sizes" style="display:none;">
+                    {% for size in sizes[10:] %}
+                        <div>
+                            <input type="checkbox" id="size_{{ size }}" name="size" value="{{ size }}" {% if size in request.args.get('sizes', '').split(',') %}checked{% endif %}>
+                            <label for="size_{{ size }}">{{ size }}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+        <!-- Filter by Price -->
+        <div class="filter-section">
+            <label for="price">Цена</label>
+            <input type="range" id="price-min" name="price-min" min="{{ min_db_price }}" max="{{ max_db_price }}" value="{{ request.args.get('min_price', min_db_price) }}">
+            <input type="range" id="price-max" name="price-max" min="{{ min_db_price }}" max="{{ max_db_price }}" value="{{ request.args.get('max_price', max_db_price) }}">
+            <div>Цена: <span id="price-range"></span></div>
+            <button id="apply-price-filter">Применить</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show more models
+            document.getElementById('show-more-models').addEventListener('click', function () {
+                document.getElementById('all-models').style.display = 'block';
+                this.style.display = 'none';
+            });
+    
+            // Show more sizes
+            document.getElementById('show-more-sizes').addEventListener('click', function () {
+                document.getElementById('all-sizes').style.display = 'block';
+                this.style.display = 'none';
+            });
+    
+            // Price filter
+            var priceMin = document.getElementById('price-min');
+            var priceMax = document.getElementById('price-max');
+            var priceRange = document.getElementById('price-range');
+    
+            function updatePriceRange() {
+                priceRange.textContent = `${priceMin.value} - ${priceMax.value} ₽`;
+            }
+    
+            priceMin.addEventListener('input', updatePriceRange);
+            priceMax.addEventListener('input', updatePriceRange);
+    
+            document.getElementById('apply-price-filter').addEventListener('click', function () {
+                applyFilters();
+            });
+    
+            // Apply filters
+            function applyFilters() {
+                var selectedModels = Array.from(document.querySelectorAll('input[name="model"]:checked')).map(el => el.value);
+                var selectedSizes = Array.from(document.querySelectorAll('input[name="size"]:checked')).map(el => el.value);
+                var minPrice = priceMin.value;
+                var maxPrice = priceMax.value;
+    
+                var params = new URLSearchParams(window.location.search);
+                if (selectedModels.length > 0) {
+                    params.set('models', selectedModels.join(','));
+                } else {
+                    params.delete('models');
+                }
+                if (selectedSizes.length > 0) {
+                    params.set('sizes', selectedSizes.join(','));
+                } else {
+                    params.delete('sizes');
+                }
+                params.set('min_price', minPrice);
+                params.set('max_price', maxPrice);
+    
+                window.location.href = '?' + params.toString();
+            }
+    
+            updatePriceRange();
+        });
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var sortSelect = document.getElementById('sort');
+            var currentSort = new URLSearchParams(window.location.search).get('sort');
+            if (currentSort) {
+                sortSelect.value = currentSort; // Устанавливаем выбранное значение сортировки из URL
+            }
+        });
+    
+        function applySort() {
+            var sortSelect = document.getElementById('sort');
+            var selectedOption = sortSelect.options[sortSelect.selectedIndex].value;
+    
+            var url = window.location.href.split('?')[0]; // Получаем текущий URL без параметров
+            var params = new URLSearchParams(window.location.search);
+            
+            if (selectedOption !== 'default') {
+                params.set('sort', selectedOption); // Устанавливаем новое значение параметра sort
+            } else {
+                params.delete('sort'); // Удаляем параметр sort, если выбрано значение по умолчанию
+            }
+    
+            window.location.href = url + '?' + params.toString(); // Перенаправляем страницу с новым URL
+        }
+    </script>
+    
+      <div class="catalog-title" style="display: block ruby;" >
+          {% for manufacturer in manufacturers %}
+              <a href="?manufacturer={{ manufacturer }}" style="color: black;">{{ manufacturer }}</a>
+          {% endfor %}
+          <div class="filters">
+            <label for="sort">Порядок:</label>
+            <select id="sort" onchange="applySort()">
+                <option value="default">по умолчанию</option>
+                <option value="price-asc">Цена: по возрастанию</option>
+                <option value="price-desc">Цена: по убыванию</option>
+                <option value="name-asc">Название: А-Я</option>
+                <option value="name-desc">Название: Я-А</option>
+                <option value="newest">Порядок: сперва новые</option>
+                <option value="oldest">Порядок: сперва старые</option>
+            </select>
+        </div>
+        
+        <script>
+            function applySort() {
+              var sortSelect = document.getElementById('sort');
+              var selectedOption = sortSelect.options[sortSelect.selectedIndex].value;
+
+              var url = window.location.href.split('?')[0]; // Получаем текущий URL без параметров
+
+              if (selectedOption !== 'default') {
+                  var params = new URLSearchParams(window.location.search);
+                  params.set('sort', selectedOption); // Устанавливаем новое значение параметра sort
+
+                  // Собираем URL с новыми параметрами
+                  url = url + '?' + params.toString();
+              }
+
+              window.location.href = url; // Перенаправляем страницу с новым URL
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+        var sortSelect = document.getElementById('sort');
+        var currentSort = new URLSearchParams(window.location.search).get('sort');
+        if (currentSort) {
+            sortSelect.value = currentSort; // Устанавливаем выбранное значение сортировки из URL
+        }
+    });
+        </script>
+      </div>
+      <div class="catalog-list" id="catalog">
+        {% for product in products %}
+        <div class="catalog-item">
+          <div class="catalog-item-image-container">
+            <img src="{{ url_for('static', filename='photos/' ~ product.photos[0].filename) }}" class="catalog-item-image" style="display: block;">
+                <img src="{{ url_for('static', filename='photos/' ~ product.photos[1].filename) }}"
+                    class="catalog-item-image catalog-item-image-reversed"
+                  />
+          </div>
+          <a href="{{ url_for('product_detail', product_id=product.id) }}" style="color: black;">
+              <div class="catalog-item-title">{{ product.manufacturer }} {{ product.model }}</div>
+          </a>
+          <div class="catalog-item-description">
+            {{ product.article_number }}
+          </div>
+          <div class="catalog-item-prices">
+            <div class="catalog-item-prices-new">{{ product.price }}₽</div>
+            <div class="catalog-item-prices-old">{{ product.crossed_out_price }}₽</div>
+          </div>
+          <a href="{{ product.order_link }}" target="_blank" class="catalog-item-order" style="display: block;">
+            Оформить заказ
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                fill="#fff"></path>
+            </svg>
+          </a>
+          <div class="catalog-item-available" style="display: none;">В наличии на складе!</div>
+        </div>
+        {% endfor %}
+
+      </div>
+      <center>
+        <button class="catalog-item-order" style="border: none;" id="load-more">
+          <h3>Загрузить еще</h3>
+        </button>
+      </center>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var loadMoreButton = document.getElementById('load-more');
+          var catalog = document.getElementById('catalog');
+          var start = 8; // Начальная позиция для загрузки
+          var limit = 8; // Количество товаров для загрузки за раз
+          var totalProducts =  parseInt(`{{total_products}}`);
+          var manufacturerFilter = ""; // Переменная для хранения текущего фильтра производителя
+          var sort = "";
+          
+          if (start >= totalProducts) {
+            loadMoreButton.style.display = 'none';
+          }
+
+          // Функция для извлечения фильтра производителя из текущей ссылки
+          function extractManufacturerFilterFromUrl() {
+              var urlParams = new URLSearchParams(window.location.search);
+              manufacturerFilter = urlParams.get('manufacturer') || ""; // Получаем значение параметра manufacturer из URL
+              sort = urlParams.get('sort') || "";
+              sort = urlParams.get('sort') || "";
+              sort = urlParams.get('sort') || "";
+              sort = urlParams.get('sort') || "";
+            }
+
+          // Первоначальное извлечение фильтра из текущей ссылки
+          extractManufacturerFilterFromUrl();
+      
+          loadMoreButton.addEventListener('click', function () {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4 && xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText).html;
+                catalog.insertAdjacentHTML('beforeend', data);
+                start += limit;
+      
+                // Обновляем обработчики событий для новых товаров
+                updateEventHandlers();
+      
+                // Проверяем, все ли товары загружены
+                if (start >= totalProducts) {
+                  loadMoreButton.style.display = 'none';
+                }
+              }
+            };
+      
+            // Формируем URL запроса с учетом фильтра производителя
+            var url = '/load-more?';
+            const params = new URLSearchParams(window.location.search);
+            params.set('start', start);
+            params.set('limit', limit);
+
+            xhr.open('GET', url+params.toString(), true);
+            xhr.send();
+          });
+      
+          function updateEventHandlers() {
+            const catalogContainerImages = document.querySelectorAll(".catalog-item-image");
+      
+            const handleHoverIn = (e) => {
+              if (e.target.closest(".catalog-item-image-container") == null) return;
+              const catalogItem = e.target.closest(".catalog-item");
+      
+              const originalImage = e.target.closest(
+                ".catalog-item-image-container"
+              ).firstElementChild;
+              const reversedImage = originalImage.nextElementSibling;
+              const orderButton = catalogItem.querySelector(".catalog-item-order");
+              const itemAvailable = catalogItem.querySelector(".catalog-item-available");
+      
+              originalImage.style.display = "none";
+              reversedImage.style.display = "block";
+      
+              orderButton.style.display = "none";
+              itemAvailable.style.display = "flex";
+            };
+      
+            const handleHoverOut = (e) => {
+              if (e.target.closest(".catalog-item-image-container") == null) return;
+              const catalogItem = e.target.closest(".catalog-item");
+      
+              const originalImage = e.target.closest(
+                ".catalog-item-image-container"
+              ).firstElementChild;
+              const reversedImage = originalImage.nextElementSibling;
+              const orderButton = catalogItem.querySelector(".catalog-item-order");
+              const itemAvailable = catalogItem.querySelector(".catalog-item-available");
+      
+              originalImage.style.display = "block";
+              reversedImage.style.display = "none";
+              orderButton.style.display = "block";
+              itemAvailable.style.display = "none";
+            };
+      
+            catalogContainerImages.forEach((catalogContainerImage) =>
+              catalogContainerImage.addEventListener("mouseover", handleHoverIn)
+            );
+      
+            catalogContainerImages.forEach((catalogContainerImage) =>
+              catalogContainerImage.addEventListener("mouseout", handleHoverOut)
+            );
+          }
+      
+          // Изначально вызываем для начальной загрузки товаров
+          updateEventHandlers();
+        });
+      </script>
+      <!-- <div class="catalog-list swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/Nike P-6000.png') }}" class="catalog-item-image" />
+            <div class="catalog-item-title">Nike P-6000</div>
+            <div class="catalog-item-description">
+              Flat Pewter Light Iron Ore
+            </div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">14.000₽</div>
+              <div class="catalog-item-prices-old">17.000₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}New Balance 1906D.png" class="catalog-item-image" />
+            <div class="catalog-item-title">New Balance 1906D</div>
+            <div class="catalog-item-description">
+              Protection Pack - Black
+            </div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">12.000₽</div>
+              <div class="catalog-item-prices-old">13.500₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}assets/Adidas Samba OG.png" class="catalog-item-image" />
+            <div class="catalog-item-title">Adidas Samba OG</div>
+            <div class="catalog-item-description">Halo Blue</div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">12.000₽</div>
+              <div class="catalog-item-prices-old">14.000₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}New Balance 1906R.png" class="catalog-item-image" />
+            <div class="catalog-item-title">New Balance 1906R</div>
+            <div class="catalog-item-description">Taos Taupe</div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">12.000₽</div>
+              <div class="catalog-item-prices-old">14.000₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}Nike Air Humara LX WMNS.png" class="catalog-item-image" />
+            <div class="catalog-item-title">Nike Air Humara LX WMNS</div>
+            <div class="catalog-item-description">Jacquemus - Pink Flash</div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">17.000₽</div>
+              <div class="catalog-item-prices-old">19.000₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}Notitle x Adidas Samba.png" class="catalog-item-image" />
+            <div class="catalog-item-title">Notitle x Adidas Samba</div>
+            <div class="catalog-item-description">Cow Print</div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">16.500₽</div>
+              <div class="catalog-item-prices-old">19.500₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}Nike SB Dunk Low x Yuto Horigome.png" class="catalog-item-image" />
+            <div class="catalog-item-title">
+              Nike SB Dunk Low x Yuto Horigome
+            </div>
+            <div class="catalog-item-description"></div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">16.000₽</div>
+              <div class="catalog-item-prices-old">19.000₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+          <div class="swiper-slide catalog-item">
+            <img src="{{ url_for('static', filename='assets/logo.png') }}Nike Dunk SB Low Pro x Tightbooth.png" class="catalog-item-image" />
+            <div class="catalog-item-title">
+              Nike Dunk SB Low Pro x Tightbooth
+            </div>
+            <div class="catalog-item-description">Black and White</div>
+            <div class="catalog-item-prices">
+              <div class="catalog-item-prices-new">14.000₽</div>
+              <div class="catalog-item-prices-old">16.500₽</div>
+            </div>
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="catalog-item-order">
+              Оформить заказ
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+                  fill="#fff" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div> -->
+      <img src="{{ url_for('static', filename='assets/catalog-star-small.png') }}" class="catalog-star-small" />
+      <img src="{{ url_for('static', filename='assets/catalog-star.png') }}" class="catalog-star" />
+      <img src="{{ url_for('static', filename='assets/catalog-like.png') }}" class="catalog-like" />
+      <img src="{{ url_for('static', filename='assets/catalog-like-small.png') }}" class="catalog-like-small" />
+    </div>
+    <div id="promotion" class="promotion">
+      <img src="{{ url_for('static', filename='assets/rotate-bg.png') }}" class="rotate-bg" />
+      <div class="promotion-block">
+        <div class="promotion-left">
+          <div class="promotion-title">
+            <img src="{{ url_for('static', filename='assets/gift.svg') }}" alt="gift" />
+            Акция на первый заказ!
+          </div>
+          <div class="promotion-description">
+            <span>Бесплатная доставка</span> заказанного товара через СДЭК в
+            любой регион РФ
+          </div>
+          <div class="promotion-buttons">
+            <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="promotion-order">
+              Сделать заказ
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 0C4.49 0 0 4.49 0 10C0 15.51 4.49 20 10 20C15.51 20 20 15.51 20 10C20 4.49 15.51 0 10 0ZM12.79 10.53L9.26 14.06C9.11 14.21 8.92 14.28 8.73 14.28C8.54 14.28 8.35 14.21 8.2 14.06C7.91 13.77 7.91 13.29 8.2 13L11.2 10L8.2 7C7.91 6.71 7.91 6.23 8.2 5.94C8.49 5.65 8.97 5.65 9.26 5.94L12.79 9.47C13.09 9.76 13.09 10.24 12.79 10.53Z"
+                  fill="#57BFC1" />
+              </svg>
+            </a>
+            <a href="https://t.me/+vgpeE5RM4Pg5YzJk" target="_blank" class="promotion-feedback">
+              Отзывы <span>о нас</span><svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.6667 0H3.33333C1.48889 0 0 1.46391 0 3.26904V15.2775C0 17.0827 1.48889 18.5466 3.33333 18.5466H4.17778C5.06667 18.5466 5.91111 18.8878 6.53333 19.5042L8.43333 21.3644C9.3 22.2119 10.7111 22.2119 11.5778 21.3644L13.4778 19.5042C14.1 18.8878 14.9556 18.5466 15.8333 18.5466H16.6667C18.5111 18.5466 20 17.0827 20 15.2775V3.26904C20 1.46391 18.5111 0 16.6667 0ZM15.2 9.35585L13.9 13.2743C13.7333 13.9237 13.0333 14.452 12.3222 14.452H10.2667C9.91111 14.452 9.41111 14.331 9.18889 14.1108L7.55556 12.845C7.52222 13.5495 7.2 13.8467 6.41111 13.8467H5.87778C5.05556 13.8467 4.72222 13.5275 4.72222 12.757V7.50669C4.72222 6.73621 5.05556 6.41701 5.87778 6.41701H6.42222C7.24444 6.41701 7.57778 6.73621 7.57778 7.50669V7.90294L9.73333 4.73296C9.95556 4.39175 10.5222 4.14959 11 4.33671C11.5222 4.51282 11.8556 5.08518 11.7444 5.5915L11.4778 7.30857C11.4444 7.45166 11.4778 7.60575 11.5778 7.70482C11.6667 7.80388 11.8 7.86992 11.9444 7.86992H14.1111C14.5333 7.86992 14.8889 8.03502 15.1 8.33221C15.3 8.61839 15.3333 8.98161 15.2 9.35585Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="promotion-right">
+          <div class="promotion-element promotion-element-first">
+            <div class="promotion-element-title">
+              Товары в наличии
+              <img src="{{ url_for('static', filename='assets/cart.png') }}" alt="" class="promotion-element-title-img" />
+            </div>
+            <div class="promotion-element-description">
+              У нас есть огромный ассортимент товаров, которые уже находятся
+              на нашем складе в Москве
+            </div>
+            <img src="" alt="" class="promotion-element-bg" />
+          </div>
+          <img src="{{ url_for('static', filename='assets/promotion-line1.png') }}" class="promotion-line promotion-line-first" />
+          <div class="promotion-element promotion-element-second">
+            <div class="promotion-element-title">
+              Быстрая доставка
+              <img src="{{ url_for('static', filename='assets/car.png') }}" alt="" class="promotion-element-title-img" />
+            </div>
+            <div class="promotion-element-description">
+              Cамая быстрая доставка среди всех конкурентов. Доставка в любую
+              точку РФ за 1-5 дней
+            </div>
+            <img src="" alt="" class="promotion-element-bg" />
+          </div>
+          <img src="{{ url_for('static', filename='assets/promotion-line2.png') }}" class="promotion-line promotion-line-second" />
+          <div class="promotion-element promotion-element-third">
+            <div class="promotion-element-title">
+              Ассортимент Poizon
+              <img src="{{ url_for('static', filename='assets/box.png') }}" alt="" class="promotion-element-title-img" />
+            </div>
+            <div class="promotion-element-description">
+              Мы поможем вам заказать любую интересующую вас вещь прямиком с
+              poizon по доступной цене
+            </div>
+            <img src="" alt="" class="promotion-element-bg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="stages" class="stages">
+      <div class="stages-title">
+        Оформление заказа товаров с <span>POZION</span>
+      </div>
+      <div class="stages-list">
+        <div class="stage">
+          <div class="stage-flex">
+            <div class="stage-number">01</div>
+            <img src="{{ url_for('static', filename='assets/stage-line1.png') }}" class="stage-line" />
+            <img src="{{ url_for('static', filename='assets/stage-line-mobile1.png') }}" class="stage-line-mobile" />
+          </div>
+          <div class="stage-text">
+            Оформление заказа займёт не более 5 минут (мы помогаем
+            найти/подобрать товар по фото, определиться с размером)
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-flex">
+            <div class="stage-number">02</div>
+            <img src="{{ url_for('static', filename='assets/stage-line2.png') }}" class="stage-line" />
+            <img src="{{ url_for('static', filename='assets/stage-line-mobile2.png') }}" class="stage-line-mobile" />
+          </div>
+          <div class="stage-text">
+            Выкуп товара в день оплаты (выкупы происходят круглосуточно)
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-flex">
+            <div class="stage-number">03</div>
+            <img src="{{ url_for('static', filename='assets/stage-line3.png') }}" class="stage-line" />
+            <img src="{{ url_for('static', filename='assets/stage-line-mobile3.png') }}" class="stage-line-mobile" />
+          </div>
+          <div class="stage-text">
+            По просьбе клиентов мы предоставляем дополнительные фото/видео
+            интересующей пары
+          </div>
+        </div>
+        <div class="stage">
+          <div class="stage-flex">
+            <div class="stage-number">04</div>
+            <img src="" class="stage-line" />
+          </div>
+          <div class="stage-text">
+            Каждый клиент получает от нас трек-номер, по которому сам может
+            отслеживать посылку
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="calc" class="calc">
+      <div class="calculator">
+        <div class="calculator-title">
+          Рассчитай стоимость заказа прямо на сайте
+        </div>
+        <input placeholder="Цена на товар в юанях" type="text" class="calculator-input" />
+        <div class="calculator-choose">
+          <div class="calculator-choose-title">Обувь</div>
+          <div class="calculator-choose-button">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00002 1L8 7.99997L1.00002 15" stroke="white" stroke-opacity="0.5" stroke-width="1.5" />
+              <path d="M8.00002 1L15 7.99997L8.00002 15" stroke="white" stroke-width="1.5" />
+            </svg>
+          </div>
+        </div>
+        <div class="calculator-total">
+          Итоговая стоимость:
+          <div class="calculator-total-number"></div>
+        </div>
+        <div class="calculator-other">С учётом доставки</div>
+        <img src="{{ url_for('static', filename='assets/calculator-icon-small.png') }}" class="calculator-icon-small" />
+        <img src="{{ url_for('static', filename='assets/calculator-icon.png') }}" class="calculator-icon" />
+      </div>
+      <div class="calc-order">
+        <div class="calc-order-container">
+          <div class="calc-order-title">
+            Подходит цена? - скорее заказывай!
+          </div>
+          <div class="calc-order-description">
+            Выбирайте товары в POZION или покупайте прямо с нашего склада в
+            Москве
+          </div>
+          <div class="calc-order-qr">
+            <img src="{{ url_for('static', filename='assets/qr-code.svg') }}" alt="" />
+            <img src="{{ url_for('static', filename='assets/qr-bg.png') }}" alt="" class="calc-order-qr-bg" />
+            <img src="{{ url_for('static', filename='assets/qr-gift1.png') }}" alt="" class="calc-order-qr-gift-1" />
+            <img src="{{ url_for('static', filename='assets/qr-gift2.png') }}" alt="" class="calc-order-qr-gift-2" />
+          </div>
+          <img src="{{ url_for('static', filename='assets/calc-order-snickers.png') }}" alt="" class="calc-order-img" />
+        </div>
+        <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="calc-order-button">
+          Сделать заказ
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.2568 0.189209C4.97013 0.189209 0.662155 4.49718 0.662155 9.7838C0.662155 15.0704 4.97013 19.3784 10.2568 19.3784C15.5434 19.3784 19.8513 15.0704 19.8513 9.7838C19.8513 4.49718 15.5434 0.189209 10.2568 0.189209ZM12.9336 10.2923L9.54675 13.6792C9.40283 13.8231 9.22053 13.8903 9.03824 13.8903C8.85594 13.8903 8.67364 13.8231 8.52972 13.6792C8.25148 13.401 8.25148 12.9404 8.52972 12.6622L11.4081 9.7838L8.52972 6.90543C8.25148 6.62718 8.25148 6.16664 8.52972 5.8884C8.80797 5.61016 9.26851 5.61016 9.54675 5.8884L12.9336 9.27529C13.2215 9.55353 13.2215 10.0141 12.9336 10.2923Z"
+              fill="white" />
+          </svg>
+        </a>
+      </div>
+      <div class="calc-top"></div>
+    </div>
+
+    <div id="answers" class="answers">
+      <div class="answers-title">Ответы на частозадаваемые вопросы</div>
+      <div class="answers-list">
+        <div class="answers-left">
+          <div class="question">
+            <div class="question-flex">
+              <div class="question-title">Что такое Poizon?</div>
+              <div class="question-btn">
+                <img src="{{ url_for('static', filename='assets/question-btn.png') }}" alt="" />
+              </div>
+            </div>
+            <div class="question-answer">
+              Poizon - китайский маркетплейс с гигантским ассортиментом
+              брендовых кроссовок и одежды, в том числе лимитированных
+              выпусков и коллабораций: 95% товаров невозможно найти в России.
+              <br /><br />
+              Помимо гигантского ассортимента Poizon предлагает цены на
+              оригинальную продукцию в 2-3 раза ниже, чем в России, поэтому он
+              так интересен Россиянам.<br /><br />
+              Ключевая проблема - Poizon работает только на территории Китая,
+              поэтому функцию доставки в Россию осуществляем мы, как
+              посредник, за небольшую комиссию.
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-flex">
+              <div class="question-title">
+                Можно ли заказать товар, которого нет у вас в ассортименте?
+              </div>
+              <div class="question-btn">
+                <img src="{{ url_for('static', filename='assets/question-btn.png') }}" alt="" />
+              </div>
+            </div>
+            <div class="question-answer">
+              Да, конечно. Если вы не нашли нужного товара в нашем
+              ассортименте – мы можем предложить оформить заказ со склада в
+              Китаее. Из Китая в Москву товар идет от 5 до 15 дней. С учетом
+              времени на выкуп и доставку до нужного города, товары обычно
+              приходят нашим клиентам за 2 недели.
+            </div>
+          </div>
+        </div>
+        <div class="answers-right">
+          <div class="question">
+            <div class="question-flex">
+              <div class="question-title">
+                Сколько по времени занимает доставка с нашего склада?
+              </div>
+              <div class="question-btn">
+                <img src="{{ url_for('static', filename='assets/question-btn.png') }}" alt="" />
+              </div>
+            </div>
+            <div class="question-answer">
+              Все товары находятся на нашем складе в Москве и доставка в
+              среднем занимает 1-5 дней. Мы отправляем заказы многими службами
+              доставки, чтобы каждому клиенту было как можно удобнее получить
+              свой заказ.
+            </div>
+          </div>
+
+          <div class="question">
+            <div class="question-flex">
+              <div class="question-title">
+                Вы предоставляете оригинальные товары?
+              </div>
+              <div class="question-btn">
+                <img src="{{ url_for('static', filename='assets/question-btn.png') }}" alt="" />
+              </div>
+            </div>
+            <div class="question-answer">
+              У нас вы найдете только оригинальную продукцию. Наши крепкие
+              связи с поставщиками из Европы и Китая, проверены временем и ни
+              одной сотней поставок.
+            </div>
+          </div>
+          <div class="question">
+            <div class="question-flex">
+              <div class="question-title">Какие у вас гарантии?</div>
+              <div class="question-btn">
+                <img src="{{ url_for('static', filename='assets/question-btn.png') }}" alt="" />
+              </div>
+            </div>
+            <div class="question-answer">
+              За 2 года нашей работы в нашем телеграм канале уже более 10.000
+              подписчиков и их число постоянно растет. У нас есть отдельный
+              канал по отзывам клиентов и оформленных товаров. Мы работаем
+              честно и прозрачно, не скрывая свои данные и заказы. Все посылки
+              страхуются и в случае потери мы поможем вам получить ваш товар.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sizes" class="sizes">
+      <div class="sizes-title-mobile">
+        Как правильно подобрать размер обуви?
+      </div>
+      <div class="sizes-table">
+        <div class="size-names">
+          <div class="size-eu">Размер EU</div>
+          <div class="size-cm">Размер стопы</div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">36</div>
+          <div class="size-value-cm">22.5&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">37</div>
+          <div class="size-value-cm">23&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">38</div>
+          <div class="size-value-cm">24&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">39</div>
+          <div class="size-value-cm">24.5&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">40</div>
+          <div class="size-value-cm">25&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">41</div>
+          <div class="size-value-cm">26&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">42</div>
+          <div class="size-value-cm">26.5&nbsp;<i>см</i></div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">43</div>
+          <div class="size-value-cm">27.5</div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">44</div>
+          <div class="size-value-cm">28</div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">45</div>
+          <div class="size-value-cm">29</div>
+        </div>
+        <div class="size-value">
+          <div class="size-value-eu">46</div>
+          <div class="size-value-cm">30</div>
+        </div>
+      </div>
+      <div class="sizes-how">
+        <div class="sizes-how-title">
+          Как правильно подобрать размер обуви?
+        </div>
+        <div class="sizes-how-flex">
+          <div class="sizes-how-item">
+            <div class="sizes-how-item-flex">
+              <div class="sizes-how-item-number">01</div>
+              <img src="{{ url_for('static', filename='assets/sizes-how-line.png') }}" class="sizes-how-item-line" />
+            </div>
+            <div class="sizes-how-item-text">
+              Поставь ногу на лист бумаги так, чтоб пятка касалась стены
+            </div>
+          </div>
+          <div class="sizes-how-item">
+            <div class="sizes-how-item-flex">
+              <div class="sizes-how-item-number">02</div>
+              <img src="{{ url_for('static', filename='assets/sizes-how-line.png') }}" class="sizes-how-item-line" />
+            </div>
+            <div class="sizes-how-item-text">
+              Обведи ногу карандашом, не отрывая стопу от бумаги
+            </div>
+          </div>
+          <div class="sizes-how-item">
+            <div class="sizes-how-item-flex">
+              <div class="sizes-how-item-number">03</div>
+              <img src="{{ url_for('static', filename='assets/sizes-how-line.png') }}" class="sizes-how-item-line" />
+            </div>
+            <div class="sizes-how-item-text">
+              Измерь расстояние от кончика большого пальца до конца пятки
+            </div>
+          </div>
+          <div class="sizes-how-item">
+            <div class="sizes-how-item-flex">
+              <div class="sizes-how-item-number">04</div>
+              <img src="{{ url_for('static', filename='assets/sizes-how-line.png') }}" class="sizes-how-item-line" />
+            </div>
+            <div class="sizes-how-item-text">
+              Повтори эти же действия со второй стопой
+            </div>
+          </div>
+        </div>
+        <div class="sizes-how-other">
+          Узнав больший размер своей стопы в СМ, обратись к нашей таблице и
+          найди свой размер
+        </div>
+      </div>
+      <div class="sizes-images">
+        <img class="sizes-line-mobile" src="{{ url_for('static', filename='assets/sizes-line-mobile.png') }}" alt="" />
+        <img class="sizes-snickers" src="{{ url_for('static', filename='assets/sizes-snickers.png') }}" alt="" />
+        <img class="sizes-line" src="{{ url_for('static', filename='assets/sizes-line.png') }}" alt="" />
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='assets/footer-logo.png') }}" alt="logo" class="footer-logo-img" />
+        <div class="footer-logo-text">
+          MARGIELA <br />
+          SERVICE
+        </div>
+      </div>
+      <div class="footer-flex">
+        <nav class="footer-nav">
+          <a href="#main" class="footer-nav-item">Главная</a>
+          <a href="#products" class="footer-nav-item">Товары в Москве</a>
+          <a href="#stages" class="footer-nav-item">Оформление заказа</a>
+          <a href="#calc" class="footer-nav-item">Калькулятор стоимости</a>
+          <a href="#promotion" class="footer-nav-item">Акция</a>
+          <a href="#answers" class="footer-nav-item">FAQ</a>
+          <a href="#sizes" class="footer-nav-item">Таблица размеров</a>
+        </nav>
+        <a href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank" class="footer-link">
+          Сделать заказ
+          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M0.962427 5.16592C4.72052 3.47245 7.2265 2.356 8.48037 1.81659C12.0604 0.276465 12.8043 0.00892841 13.2892 9.41924e-05C13.3959 -0.00184879 13.6343 0.0254864 13.7887 0.155112C13.9192 0.264566 13.955 0.412421 13.9722 0.516195C13.9894 0.619969 14.0108 0.856369 13.9938 1.04108C13.7998 3.1494 12.9603 8.26573 12.5332 10.6271C12.3525 11.6263 11.9967 11.9613 11.6522 11.9941C10.9036 12.0653 10.3351 11.4823 9.61007 10.9908C8.47546 10.2215 7.83448 9.74265 6.73315 8.992C5.46037 8.1245 6.28546 7.64771 7.01082 6.86849C7.20064 6.66457 10.4991 3.56151 10.5629 3.28001C10.5709 3.2448 10.5783 3.11357 10.503 3.04428C10.4276 2.97498 10.3163 2.99868 10.236 3.01753C10.1223 3.04424 8.3097 4.28334 4.79841 6.73483C4.28392 7.10023 3.81791 7.27826 3.40039 7.26893C2.9401 7.25865 2.05469 6.99976 1.39648 6.77846C0.589162 6.50704 -0.0524811 6.36353 0.00339163 5.90257C0.0324936 5.66247 0.352172 5.41692 0.962427 5.16592Z"
+              fill="#fff" />
+          </svg>
+        </a>
+      </div>
+      <div class="footer-other">
+        <div class="footer-design">
+          Designed with love by Mifka design agency
+        </div>
+        <div class="footer-license">Все права защищены ©2023</div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.model }} - Детали товара</title>
+</head>
+<body>
+    <h1>{{ product.model }}</h1>
+    <h2>Производитель: {{ product.manufacturer }}</h2>
+    <p>Артикул: {{ product.article_number }}</p>
+    <p>Цена: {{ product.price }} ₽</p>
+    <p>Цена со скидкой: {{ product.crossed_out_price }} ₽</p>
+
+    <div class="photos">
+        {% for photo in product.photos %}
+            <img src="{{ url_for('static', filename='photos/' ~ photo.filename) }}" alt="{{ product.model }}">
+        {% endfor %}
+    </div>
+
+    <div class="sizes">
+        <h3>Доступные размеры:</h3>
+        <ul>
+            {% for size in product.sizes %}
+                <li>{{ size.size }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

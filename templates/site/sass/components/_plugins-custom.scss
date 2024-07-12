@@ -1,0 +1,14 @@
+.tippy-box {
+  background: transparent;
+  border: 0;
+  line-height: 1;
+  max-width: none !important;
+}
+
+.tippy-content {
+  padding: 0;
+}
+
+.tippy-arrow:before {
+  display: none;
+}

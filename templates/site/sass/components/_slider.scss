@@ -1,0 +1,206 @@
+.nav-def {
+  display: flex;
+  gap: 25px;
+
+  &__arr {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgba(26, 43, 59, 0.15);
+    background: #fff;
+    border-radius: 100%;
+    padding: 14px;
+    width: 48px;
+    height: 48px;
+    user-select: none;
+  }
+}
+
+.slider-cat {
+  overflow: visible;
+
+  &:not(.swiper-initialized) {
+    .swiper-wrapper {
+      gap: 51px;
+
+      @media screen and (max-width: $sc-desctop-sm) {
+        gap: 20px;
+      }
+    }
+  }
+
+  &__el {
+    width: 635px;
+    position: relative;
+
+    @media screen and (max-width: $sc-desctop-sm) {
+      width: 500px;
+    }
+
+    @media screen and (max-width: $sc-mob) {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: -51px;
+
+      @media screen and (max-width: $sc-desctop-sm) {
+        right: -20px;
+      }
+    }
+  }
+
+  &-el {
+    display: flex;
+    background: #f1f5f9;
+    border-radius: 25px;
+    padding: 39px 30px;
+    padding-bottom: 20px;
+    gap: 9px;
+
+    @media screen and (max-width: $sc-desctop-sm) {
+      align-items: center;
+    }
+
+    @media screen and (max-width: $sc-mob) {
+      padding: 36px 25px;
+      padding-right: 116px;
+      padding-bottom: 50px;
+      display: block;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__body {
+      position: relative;
+      z-index: 10;
+    }
+
+    &__img {
+      flex: none;
+      display: block;
+      object-fit: contain;
+      width: 248px;
+      height: 248px;
+
+      @media screen and (max-width: $sc-desctop-sm) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: $sc-mob) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding-bottom: 50px;
+        z-index: 1;
+        width: 127px;
+      }
+    }
+
+    &__text {
+      @media screen and (max-width: $sc-mob) {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      margin-top: 20px;
+
+      @media screen and (max-width: $sc-mob) {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.products-swiper {
+  &:not(.swiper-initialized) {
+    .swiper-wrapper {
+      gap: 20px;
+    }
+  }
+
+  &__el {
+    width: 395px;
+    position: relative;
+
+    @media screen and (max-width: $sc-desctop) {
+      width: 277px;
+    }
+
+    @media screen and (max-width: $sc-tablet) {
+      width: 232px;
+    }
+
+    @media screen and (max-width: $sc-tablet-sm) {
+      width: 275px;
+    }
+
+    @media screen and (max-width: $sc-mob) {
+      width: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: -20px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 92px;
+
+    @media screen and (max-width: $sc-desctop) {
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: $sc-mob) {
+      margin-top: 52px;
+    }
+  }
+}
+
+
+.acts-swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  &__arr {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__text {
+    font-family: "Inter",
+      sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    min-width: 40px;
+    text-align: center;
+  }
+}

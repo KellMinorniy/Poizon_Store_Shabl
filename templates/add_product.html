@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление товара</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Мой сайт</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/admin">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">Добавить товар</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Добавление товара</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="alert alert-warning">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <label>Фотографии:</label>
+                <div class="photo-fields">
+                    {% for photo in form.photos %}
+                        <div class="form-group">
+                            {{ photo.photo(class="form-control-file") }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" class="btn btn-primary" id="add-photo">Добавить фото</button>
+            </div>
+            <div class="form-group">
+                <label for="manufacturer">Производитель:</label>
+                {{ form.manufacturer(class="form-control", id="manufacturer") }}
+            </div>
+            <div class="form-group">
+                <label for="model">Модель:</label>
+                {{ form.model(class="form-control", id="model") }}
+            </div>
+            <div class="form-group">
+                <label for="article_number">Артикул товара:</label>
+                {{ form.article_number(class="form-control", id="article_number") }}
+            </div>
+            <div class="form-group">
+                <label for="product_cat">Категория товара:</label>
+                {{ form.product_cat(class="form-control", id="product_cat") }}
+            </div>
+            <div class="form-group">
+                <label for="price">Цена:</label>
+                {{ form.price(class="form-control", id="price") }}
+            </div>
+            <div class="form-group">
+                <label for="crossed_out_price">Зачеркнутая цена:</label>
+                {{ form.crossed_out_price(class="form-control", id="crossed_out_price") }}
+            </div>
+            <div class="form-group">
+                <label>Размеры:</label>
+                <div class="size-fields">
+                    {% for size in form.sizes %}
+                        <div class="form-group">
+                            {{ size.size(class="form-control") }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" class="btn btn-primary" id="add-size">Добавить размер</button>
+            </div>
+            
+            <input type="submit" class="btn btn-primary" value="Отправить">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('add-photo').addEventListener('click', function() {
+                var photoFields = document.querySelector('.photo-fields');
+                var newPhotoField = document.createElement('div');
+                newPhotoField.className = 'form-group';
+                var index = photoFields.querySelectorAll('input[type=file]').length;
+                newPhotoField.innerHTML = '<input type="file" name="photos-' + index + '-photo" class="form-control-file">';
+                photoFields.appendChild(newPhotoField);
+            });
+
+            document.getElementById('add-size').addEventListener('click', function() {
+                var sizeFields = document.querySelector('.size-fields');
+                var newSizeField = document.createElement('div');
+                newSizeField.className = 'form-group';
+                var index = sizeFields.querySelectorAll('input[type=text]').length;
+                newSizeField.innerHTML = '<input type="text" name="sizes-' + index + '-size" class="form-control">';
+                sizeFields.appendChild(newSizeField);
+            });
+        });
+    </script>
+</body>
+</html>

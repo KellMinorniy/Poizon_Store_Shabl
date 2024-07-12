@@ -1,0 +1,18 @@
+$sc-desctop: 1753px;
+$sc-desctop-sm: 1200px;
+$sc-tablet: 991px;
+$sc-tablet-sm: 768px;
+$sc-mob: 600px;
+$sc-mob-sm: 360px;
+
+@media screen and (max-width: $sc-desctop) {}
+
+@media screen and (max-width: $sc-desctop-sm) {}
+
+@media screen and (max-width: $sc-tablet) {}
+
+@media screen and (max-width: $sc-tablet-sm) {}
+
+@media screen and (max-width: $sc-mob) {}
+
+@media screen and (max-width: $sc-mob-sm) {}

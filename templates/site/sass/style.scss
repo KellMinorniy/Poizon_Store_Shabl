@@ -1,0 +1,20 @@
+@import 'components/_reset.scss';
+@import 'components/_fonts.scss';
+
+// plugins
+@import 'components/swiper-bundle.min';
+@import 'components/nouislider';
+@import 'components/fancybox';
+
+// styles
+@import 'components/_variables.scss';
+@import 'components/_text.scss';
+@import 'components/_plugins-custom';
+@import 'components/_form.scss';
+@import 'components/_components.scss';
+@import 'components/_slider.scss';
+@import 'components/_modal.scss';
+@import 'components/_main.scss';
+@import 'components/_media.scss';
+
+@import 'components/_delete.scss';

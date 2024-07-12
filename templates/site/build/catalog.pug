@@ -1,0 +1,359 @@
+extends ./includes/def-layout.pug
+
+block variables
+
+mixin all()
+	.filt-mob
+		<svg class="filt-mob__close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5406 12.9999L25.0513 3.4892C25.223 3.32344 25.3598 3.12517 25.454 2.90595C25.5482 2.68673 25.5978 2.45095 25.5998 2.21236C25.6019 1.97378 25.5564 1.73717 25.4661 1.51634C25.3758 1.29552 25.2423 1.0949 25.0736 0.926186C24.9049 0.757475 24.7043 0.624054 24.4835 0.533707C24.2626 0.44336 24.026 0.397897 23.7874 0.39997C23.5489 0.402043 23.3131 0.451612 23.0939 0.545783C22.8746 0.639953 22.6764 0.776841 22.5106 0.948458L12.9999 10.4592L3.4892 0.948458C3.15031 0.621149 2.69642 0.440036 2.22529 0.44413C1.75417 0.448224 1.3035 0.637197 0.970346 0.970346C0.637197 1.3035 0.448224 1.75417 0.44413 2.22529C0.440036 2.69642 0.621149 3.15031 0.948458 3.4892L10.4592 12.9999L0.948458 22.5106C0.776841 22.6764 0.639953 22.8746 0.545783 23.0939C0.451612 23.3131 0.402043 23.5489 0.39997 23.7874C0.397897 24.026 0.44336 24.2626 0.533707 24.4835C0.624054 24.7043 0.757475 24.9049 0.926186 25.0736C1.0949 25.2423 1.29552 25.3758 1.51634 25.4661C1.73717 25.5564 1.97378 25.6019 2.21236 25.5998C2.45095 25.5978 2.68673 25.5482 2.90595 25.454C3.12517 25.3598 3.32344 25.223 3.4892 25.0513L12.9999 15.5406L22.5106 25.0513C22.8495 25.3787 23.3034 25.5598 23.7745 25.5557C24.2456 25.5516 24.6963 25.3626 25.0295 25.0295C25.3626 24.6963 25.5516 24.2456 25.5557 23.7745C25.5598 23.3034 25.3787 22.8495 25.0513 22.5106L15.5406 12.9999Z" fill="#1F2A37"/></svg>
+		.filt-mob__wrap
+			.filt-mob__content
+				.filt-mob__title ФИЛЬТРЫ
+				.filt-mob__block.filt-mob__block_cost
+					.filt-mob__block-title Цена, RUB
+					.range-inp
+						.range-inp__inp
+						.range-inp__inps
+							.range-inp__inps-el
+								.range-inp__inps-title От
+								.range-inp-inp
+									input.range-inp-inp__inp.range-inp-inp__from(type="text" value="3076")
+									.range-inp-inp__word ₽
+							.range-inp__inps-el
+								.range-inp__inps-title До
+								.range-inp-inp
+									input.range-inp-inp__inp.range-inp-inp__to(type="text" value="334485")
+									.range-inp-inp__word ₽
+				.filt-mob__block.filt-mob__block_size
+					.filt-mob__block-title Размер
+					.select-def
+						.select-def__top
+							.select-def__val.select-def__placeholder Не выбран
+							.select-def__arr
+								<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.71409 4.88911L4.71414 4.88916C4.78662 4.95614 4.89278 4.99993 5.01096 5L4.71409 4.88911ZM4.71409 4.88911L1.11409 1.56259L1.11414 1.56253M4.71409 4.88911L1.11414 1.56253M1.11414 1.56253L1.10769 1.55677M1.11414 1.56253L1.10769 1.55677M1.10769 1.55677C1.07097 1.524 1.04408 1.48698 1.02647 1.44909C1.00892 1.41134 1.00037 1.37239 1.00001 1.33415C0.999652 1.29593 1.00746 1.25697 1.02421 1.21915C1.04101 1.1812 1.06704 1.14397 1.10293 1.11081C1.13891 1.07757 1.18383 1.04935 1.23601 1.02962C1.28823 1.00988 1.34539 0.999546 1.40381 1.00002C1.46223 1.00048 1.51908 1.01173 1.57076 1.03225C1.62239 1.05274 1.66657 1.08155 1.70171 1.11517L1.70166 1.11523M1.10769 1.55677L1.70166 1.11523M1.70166 1.11523L1.70803 1.12111M1.70166 1.11523L1.70803 1.12111M1.70803 1.12111L4.67173 3.85967L5.01106 4.17322M1.70803 1.12111L5.01106 4.17322M5.01106 4.17322L5.35039 3.85967M5.01106 4.17322L5.35039 3.85967M5.35039 3.85967L8.31024 1.12467M5.35039 3.85967L8.31024 1.12467M8.31024 1.12467C8.3835 1.06049 8.48827 1.01953 8.6038 1.02045C8.72068 1.02139 8.82538 1.065 8.89707 1.13124C8.96748 1.19631 8.99929 1.27568 8.99999 1.34954C9.00067 1.42246 8.97115 1.50087 8.90417 1.56616L5.30803 4.88911L5.30797 4.88916C5.2355 4.95614 5.12934 4.99993 5.01116 5L8.31024 1.12467Z" fill="#6B7280" stroke="#6B7280"/></svg>
+						.select-def__dropdown
+							.checkboxes
+								label.checkboxes__el.checkbox-el(data-val="36")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 36
+								label.checkboxes__el.checkbox-el(data-val="37")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 37
+								label.checkboxes__el.checkbox-el(data-val="38")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 38
+								label.checkboxes__el.checkbox-el(data-val="39")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 39
+								label.checkboxes__el.checkbox-el(data-val="40")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 40
+								label.checkboxes__el.checkbox-el(data-val="41")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 41
+								label.checkboxes__el.checkbox-el(data-val="42")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 42
+								label.checkboxes__el.checkbox-el(data-val="43")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 43
+								label.checkboxes__el.checkbox-el(data-val="44")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 44
+								label.checkboxes__el.checkbox-el(data-val="45")
+									span.checkbox-el__inp.checkbox-def
+										input.checkbox-def__inp(type="checkbox")
+									span.checkbox-el__text 45
+				.filt-mob__block.filt-mob__block_brands
+					.filt-mob__block-title Бренды
+					.checkboxes
+						label.checkboxes__el.checkbox-el(data-val="Adidas")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Adidas
+						label.checkboxes__el.checkbox-el(data-val="Converse")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Converse
+						label.checkboxes__el.checkbox-el(data-val="Balance")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text New Balance
+						label.checkboxes__el.checkbox-el(data-val="Face")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text The North Face
+						label.checkboxes__el.checkbox-el(data-val="Timberland")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Timberland
+						label.checkboxes__el.checkbox-el(data-val="Crocs")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Crocs
+						label.checkboxes__el.checkbox-el(data-val="Martens")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Dr Martens
+						label.checkboxes__el.checkbox-el(data-val="shoes")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Native shoes
+						label.checkboxes__el.checkbox-el(data-val="Nike")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Nike
+						label.checkboxes__el.checkbox-el(data-val="Puma")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Puma
+						label.checkboxes__el.checkbox-el(data-val="Armour")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Under Armour
+						label.checkboxes__el.checkbox-el(data-val="Asics")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Asics
+						label.checkboxes__el.checkbox-el(data-val="ning")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Li-ning
+						label.checkboxes__el.checkbox-el(data-val="Tiger")
+							span.checkbox-el__inp.checkbox-def
+								input.checkbox-def__inp(type="checkbox")
+							span.checkbox-el__text Onitsuka Tiger
+	section.sec-page-2
+		.container-def
+			.sec-page-2__wrap
+				.sec-page-2__top
+					.sec-page-2__title.title-def.title-def_sec3 Обувь
+					.sec-page-2__crumbs.crumbs
+						a.crumbs__text(href="#") Главная / 
+						| 
+						a.crumbs__text(href="#") Обувь
+					.sec-page-2__mob
+						.sort-acts
+							.sort-acts__btn.btn-act
+								.btn-act__icon
+									<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5715 3.74965L7.5715 9.44004L6.55559 8.47014C6.24838 8.17684 5.75182 8.17684 5.44461 8.47014C5.1374 8.76343 5.1374 9.23751 5.44461 9.5308L7.80171 11.7812C7.87399 11.8502 7.96121 11.9049 8.05706 11.9432C8.24956 12.0189 8.46563 12.0189 8.65734 11.9432C8.75319 11.9049 8.8404 11.8502 8.91269 11.7812L11.2698 9.5308C11.423 9.38453 11.5 9.1925 11.5 9.00047C11.5 8.80844 11.423 8.61641 11.2698 8.47014C10.9626 8.17684 10.466 8.17684 10.1588 8.47014L9.1429 9.44004V3.74965C9.1429 3.33558 8.79091 2.99953 8.3572 2.99953C7.92349 2.99953 7.5715 3.33558 7.5715 3.74965Z" fill="#73818E"/><path d="M3.34286 0.0568218C3.247 0.0950775 3.15979 0.149836 3.08751 0.218846L0.730407 2.4692C0.423198 2.76249 0.423198 3.23657 0.730407 3.52986C1.03762 3.82316 1.53418 3.82316 1.84139 3.52986L2.8573 2.55996V8.25035C2.8573 8.66442 3.20929 9.00047 3.643 9.00047C4.0767 9.00047 4.4287 8.66442 4.4287 8.25035V2.55996L5.44461 3.52986C5.75182 3.82316 6.24838 3.82316 6.55559 3.52986C6.7088 3.38359 6.7858 3.19156 6.7858 2.99953C6.7858 2.8075 6.7088 2.61547 6.55559 2.4692L4.19849 0.218846C4.1262 0.149836 4.03899 0.0950775 3.94313 0.0568218C3.75142 -0.01894 3.53457 -0.01894 3.34286 0.0568218Z" fill="#73818E"/></svg>
+								span Популярное
+							.sort-acts__btn.btn-act.btn-filt
+								span Фильтры
+								.btn-act__icon
+									<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.6 3.02674H1.4544C1.57904 3.41492 1.82505 3.75373 2.15683 3.99416C2.48862 4.23459 2.88898 4.36418 3.3 4.36418C3.71102 4.36418 4.11138 4.23459 4.44317 3.99416C4.77495 3.75373 5.02096 3.41492 5.1456 3.02674H11.4C11.5591 3.02674 11.7117 2.96409 11.8243 2.85257C11.9368 2.74106 12 2.5898 12 2.43209C12 2.27438 11.9368 2.12313 11.8243 2.01161C11.7117 1.90009 11.5591 1.83744 11.4 1.83744H5.1456C5.02096 1.44927 4.77495 1.11046 4.44317 0.870025C4.11138 0.629591 3.71102 0.5 3.3 0.5C2.88898 0.5 2.48862 0.629591 2.15683 0.870025C1.82505 1.11046 1.57904 1.44927 1.4544 1.83744H0.6C0.44087 1.83744 0.288258 1.90009 0.175736 2.01161C0.0632141 2.12313 0 2.27438 0 2.43209C0 2.5898 0.0632141 2.74106 0.175736 2.85257C0.288258 2.96409 0.44087 3.02674 0.6 3.02674ZM3.3 1.68878C3.44834 1.68878 3.59334 1.73237 3.71668 1.81405C3.84001 1.89573 3.93614 2.01182 3.99291 2.14764C4.04968 2.28346 4.06453 2.43292 4.03559 2.57711C4.00665 2.72129 3.93522 2.85374 3.83033 2.95769C3.72544 3.06165 3.5918 3.13244 3.44632 3.16112C3.30083 3.18981 3.15003 3.17509 3.01299 3.11883C2.87594 3.06257 2.75881 2.96729 2.6764 2.84506C2.59399 2.72282 2.55 2.57911 2.55 2.43209C2.55032 2.23505 2.62944 2.04617 2.77002 1.90684C2.9106 1.76751 3.10119 1.68909 3.3 1.68878Z" fill="#1F2A37"/><path d="M11.4 8.97326H5.1456C5.02096 8.58508 4.77495 8.24627 4.44317 8.00584C4.11138 7.76541 3.71102 7.63581 3.3 7.63581C2.88898 7.63581 2.48862 7.76541 2.15683 8.00584C1.82505 8.24627 1.57904 8.58508 1.4544 8.97326H0.6C0.44087 8.97326 0.288258 9.03591 0.175736 9.14742C0.0632141 9.25894 0 9.4102 0 9.56791C0 9.72562 0.0632141 9.87687 0.175736 9.98839C0.288258 10.0999 0.44087 10.1626 0.6 10.1626H1.4544C1.57904 10.5507 1.82505 10.8895 2.15683 11.13C2.48862 11.3704 2.88898 11.5 3.3 11.5C3.71102 11.5 4.11138 11.3704 4.44317 11.13C4.77495 10.8895 5.02096 10.5507 5.1456 10.1626H11.4C11.5591 10.1626 11.7117 10.0999 11.8243 9.98839C11.9368 9.87687 12 9.72562 12 9.56791C12 9.4102 11.9368 9.25894 11.8243 9.14742C11.7117 9.03591 11.5591 8.97326 11.4 8.97326ZM3.3 10.3112C3.15166 10.3112 3.00666 10.2676 2.88332 10.186C2.75999 10.1043 2.66386 9.98818 2.60709 9.85236C2.55032 9.71654 2.53547 9.56708 2.56441 9.42289C2.59335 9.27871 2.66478 9.14626 2.76967 9.0423C2.87456 8.93835 3.0082 8.86756 3.15368 8.83888C3.29917 8.81019 3.44997 8.82491 3.58701 8.88117C3.72406 8.93743 3.84119 9.03271 3.9236 9.15494C4.00601 9.27718 4.05 9.42089 4.05 9.56791C4.04968 9.76495 3.97056 9.95383 3.82998 10.0932C3.6894 10.2325 3.49881 10.3109 3.3 10.3112Z" fill="#1F2A37"/><path d="M11.4 5.40535H10.5456C10.421 5.01718 10.175 4.67837 9.84317 4.43793C9.51138 4.1975 9.11102 4.06791 8.7 4.06791C8.28898 4.06791 7.88862 4.1975 7.55683 4.43793C7.22505 4.67837 6.97904 5.01718 6.8544 5.40535H0.6C0.44087 5.40535 0.288258 5.468 0.175736 5.57952C0.0632141 5.69104 0 5.84229 0 6C0 6.15771 0.0632141 6.30896 0.175736 6.42048C0.288258 6.532 0.44087 6.59465 0.6 6.59465H6.8544C6.97904 6.98282 7.22505 7.32163 7.55683 7.56207C7.88862 7.8025 8.28898 7.93209 8.7 7.93209C9.11102 7.93209 9.51138 7.8025 9.84317 7.56207C10.175 7.32163 10.421 6.98282 10.5456 6.59465H11.4C11.5591 6.59465 11.7117 6.532 11.8243 6.42048C11.9368 6.30896 12 6.15771 12 6C12 5.84229 11.9368 5.69104 11.8243 5.57952C11.7117 5.468 11.5591 5.40535 11.4 5.40535ZM8.7 6.74331C8.55166 6.74331 8.40666 6.69972 8.28332 6.61804C8.15999 6.53637 8.06386 6.42028 8.00709 6.28445C7.95033 6.14863 7.93547 5.99918 7.96441 5.85499C7.99335 5.7108 8.06478 5.57835 8.16967 5.4744C8.27456 5.37044 8.4082 5.29965 8.55368 5.27097C8.69917 5.24229 8.84997 5.25701 8.98701 5.31327C9.12406 5.36953 9.24119 5.4648 9.3236 5.58704C9.40601 5.70927 9.45 5.85299 9.45 6C9.44968 6.19704 9.37056 6.38592 9.22998 6.52525C9.0894 6.66458 8.89882 6.743 8.7 6.74331Z" fill="#1F2A37"/></svg>
+				.sec-page-2__content
+					.sec-page-2__sortMob
+						.block-sort
+							.block-sort__el.sort-mob.sort-mob_size
+								.sort-mob__text Размер
+								.sort-mob__btn
+									<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.31686 4.49995L8.37387 1.44294C8.42904 1.38966 8.47304 1.32593 8.50331 1.25547C8.53357 1.185 8.54951 1.10922 8.55017 1.03253C8.55084 0.95584 8.53623 0.879787 8.50719 0.808807C8.47815 0.737828 8.43526 0.673342 8.38103 0.619114C8.3268 0.564885 8.26232 0.522 8.19134 0.49296C8.12036 0.46392 8.04431 0.449307 7.96762 0.449973C7.89093 0.450639 7.81514 0.466572 7.74468 0.496841C7.67422 0.52711 7.61049 0.57111 7.55721 0.626273L4.5002 3.68328L1.44318 0.626273C1.33425 0.521066 1.18836 0.462851 1.03693 0.464167C0.885495 0.465483 0.740636 0.526224 0.633552 0.633308C0.526468 0.740392 0.465727 0.885251 0.464411 1.03668C0.463095 1.18812 0.52131 1.33401 0.626517 1.44294L3.68353 4.49995L0.626517 7.55696C0.571354 7.61024 0.527355 7.67397 0.497085 7.74444C0.466816 7.8149 0.450884 7.89069 0.450217 7.96738C0.449551 8.04406 0.464164 8.12011 0.493204 8.19109C0.522244 8.26207 0.565129 8.32656 0.619358 8.38079C0.673586 8.43502 0.738072 8.4779 0.809052 8.50694C0.880031 8.53598 0.956084 8.5506 1.03277 8.54993C1.10946 8.54926 1.18525 8.53333 1.25571 8.50306C1.32617 8.47279 1.38991 8.42879 1.44318 8.37363L4.5002 5.31662L7.55721 8.37363C7.66614 8.47884 7.81203 8.53705 7.96346 8.53574C8.1149 8.53442 8.25975 8.47368 8.36684 8.36659C8.47392 8.25951 8.53466 8.11465 8.53598 7.96322C8.5373 7.81178 8.47908 7.66589 8.37387 7.55696L5.31686 4.49995Z" fill="white"/></svg>
+							.block-sort__el.sort-mob.sort-mob_cost
+								.sort-mob__text Цена
+								.sort-mob__btn
+									<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.31686 4.49995L8.37387 1.44294C8.42904 1.38966 8.47304 1.32593 8.50331 1.25547C8.53357 1.185 8.54951 1.10922 8.55017 1.03253C8.55084 0.95584 8.53623 0.879787 8.50719 0.808807C8.47815 0.737828 8.43526 0.673342 8.38103 0.619114C8.3268 0.564885 8.26232 0.522 8.19134 0.49296C8.12036 0.46392 8.04431 0.449307 7.96762 0.449973C7.89093 0.450639 7.81514 0.466572 7.74468 0.496841C7.67422 0.52711 7.61049 0.57111 7.55721 0.626273L4.5002 3.68328L1.44318 0.626273C1.33425 0.521066 1.18836 0.462851 1.03693 0.464167C0.885495 0.465483 0.740636 0.526224 0.633552 0.633308C0.526468 0.740392 0.465727 0.885251 0.464411 1.03668C0.463095 1.18812 0.52131 1.33401 0.626517 1.44294L3.68353 4.49995L0.626517 7.55696C0.571354 7.61024 0.527355 7.67397 0.497085 7.74444C0.466816 7.8149 0.450884 7.89069 0.450217 7.96738C0.449551 8.04406 0.464164 8.12011 0.493204 8.19109C0.522244 8.26207 0.565129 8.32656 0.619358 8.38079C0.673586 8.43502 0.738072 8.4779 0.809052 8.50694C0.880031 8.53598 0.956084 8.5506 1.03277 8.54993C1.10946 8.54926 1.18525 8.53333 1.25571 8.50306C1.32617 8.47279 1.38991 8.42879 1.44318 8.37363L4.5002 5.31662L7.55721 8.37363C7.66614 8.47884 7.81203 8.53705 7.96346 8.53574C8.1149 8.53442 8.25975 8.47368 8.36684 8.36659C8.47392 8.25951 8.53466 8.11465 8.53598 7.96322C8.5373 7.81178 8.47908 7.66589 8.37387 7.55696L5.31686 4.49995Z" fill="white"/></svg>
+							.block-sort__el.sort-mob.sort-mob_brand
+								.sort-mob__text Бренд
+								.sort-mob__btn
+									<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.31686 4.49995L8.37387 1.44294C8.42904 1.38966 8.47304 1.32593 8.50331 1.25547C8.53357 1.185 8.54951 1.10922 8.55017 1.03253C8.55084 0.95584 8.53623 0.879787 8.50719 0.808807C8.47815 0.737828 8.43526 0.673342 8.38103 0.619114C8.3268 0.564885 8.26232 0.522 8.19134 0.49296C8.12036 0.46392 8.04431 0.449307 7.96762 0.449973C7.89093 0.450639 7.81514 0.466572 7.74468 0.496841C7.67422 0.52711 7.61049 0.57111 7.55721 0.626273L4.5002 3.68328L1.44318 0.626273C1.33425 0.521066 1.18836 0.462851 1.03693 0.464167C0.885495 0.465483 0.740636 0.526224 0.633552 0.633308C0.526468 0.740392 0.465727 0.885251 0.464411 1.03668C0.463095 1.18812 0.52131 1.33401 0.626517 1.44294L3.68353 4.49995L0.626517 7.55696C0.571354 7.61024 0.527355 7.67397 0.497085 7.74444C0.466816 7.8149 0.450884 7.89069 0.450217 7.96738C0.449551 8.04406 0.464164 8.12011 0.493204 8.19109C0.522244 8.26207 0.565129 8.32656 0.619358 8.38079C0.673586 8.43502 0.738072 8.4779 0.809052 8.50694C0.880031 8.53598 0.956084 8.5506 1.03277 8.54993C1.10946 8.54926 1.18525 8.53333 1.25571 8.50306C1.32617 8.47279 1.38991 8.42879 1.44318 8.37363L4.5002 5.31662L7.55721 8.37363C7.66614 8.47884 7.81203 8.53705 7.96346 8.53574C8.1149 8.53442 8.25975 8.47368 8.36684 8.36659C8.47392 8.25951 8.53466 8.11465 8.53598 7.96322C8.5373 7.81178 8.47908 7.66589 8.37387 7.55696L5.31686 4.49995Z" fill="white"/></svg>
+					.sec-page-2__sort.block-sort
+						.block-sort__el.sort-select.active
+							.sort-select__top
+								.sort-select__text 3 076₽ - 334 485 ₽
+							.sort-select__dropdown.popper-filt
+								.popper-filt__content
+									.range-inp
+										.range-inp__title Цена
+										.range-inp__inp
+										.range-inp__inps
+											.range-inp__inps-el
+												.range-inp__inps-title От
+												.range-inp-inp
+													input.range-inp-inp__inp.range-inp-inp__from(type="text" value="3076")
+													.range-inp-inp__word ₽
+											.range-inp__inps-el
+												.range-inp__inps-title До
+												.range-inp-inp
+													input.range-inp-inp__inp.range-inp-inp__to(type="text" value="334485")
+													.range-inp-inp__word ₽
+								.popper-filt__bottom
+									a(href="#").popper-filt__btn.btn-def-3.popper-filt__reset
+										span Сбросить
+									a(href="#").popper-filt__btn.btn-def-3.btn-def-3_bg.popper-filt__close
+										span Готово
+						.block-sort__el.sort-select.sort-select_brand
+							.sort-select__top
+								.sort-select__text Бренд
+								.sort-select__arr
+									<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.541829 0.916667L4.50016 4.875L8.4585 0.916667" stroke="#1F2A37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							.sort-select__dropdown.popper-filt
+								.popper-filt__content
+									.popper-filt__checkboxes.checkboxes
+										label.checkboxes__el.checkbox-el(data-val="Adidas")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Adidas
+										label.checkboxes__el.checkbox-el(data-val="Converse")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Converse
+										label.checkboxes__el.checkbox-el(data-val="Balance")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text New Balance
+										label.checkboxes__el.checkbox-el(data-val="Face")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text The North Face
+										label.checkboxes__el.checkbox-el(data-val="Timberland")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Timberland
+										label.checkboxes__el.checkbox-el(data-val="Crocs")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Crocs
+										label.checkboxes__el.checkbox-el(data-val="Martens")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Dr Martens
+										label.checkboxes__el.checkbox-el(data-val="shoes")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Native shoes
+										label.checkboxes__el.checkbox-el(data-val="Nike")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Nike
+										label.checkboxes__el.checkbox-el(data-val="Puma")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Puma
+										label.checkboxes__el.checkbox-el(data-val="Armour")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Under Armour
+										label.checkboxes__el.checkbox-el(data-val="Asics")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Asics
+										label.checkboxes__el.checkbox-el(data-val="ning")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Li-ning
+										label.checkboxes__el.checkbox-el(data-val="Tiger")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text Onitsuka Tiger
+								.popper-filt__bottom
+									a(href="#").popper-filt__btn.btn-def-3.popper-filt__reset
+										span Сбросить
+									a(href="#").popper-filt__btn.btn-def-3.btn-def-3_bg.popper-filt__close
+										span Готово
+						.block-sort__el.sort-select.sort-select_size
+							.sort-select__top
+								.sort-select__text Размер
+								.sort-select__arr
+									<svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.541829 0.916667L4.50016 4.875L8.4585 0.916667" stroke="#1F2A37" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							.sort-select__dropdown.popper-filt
+								.popper-filt__content
+									.popper-filt__checkboxes.checkboxes
+										label.checkboxes__el.checkbox-el(data-val="36")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 36
+										label.checkboxes__el.checkbox-el(data-val="37")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 37
+										label.checkboxes__el.checkbox-el(data-val="38")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 38
+										label.checkboxes__el.checkbox-el(data-val="39")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 39
+										label.checkboxes__el.checkbox-el(data-val="40")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 40
+										label.checkboxes__el.checkbox-el(data-val="41")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 41
+										label.checkboxes__el.checkbox-el(data-val="42")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 42
+										label.checkboxes__el.checkbox-el(data-val="43")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 43
+										label.checkboxes__el.checkbox-el(data-val="44")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 44
+										label.checkboxes__el.checkbox-el(data-val="45")
+											span.checkbox-el__inp.checkbox-def
+												input.checkbox-def__inp(type="checkbox")
+											span.checkbox-el__text 45
+								.popper-filt__bottom
+									a(href="#").popper-filt__btn.btn-def-3.popper-filt__reset
+										span Сбросить
+									a(href="#").popper-filt__btn.btn-def-3.btn-def-3_bg.popper-filt__close
+										span Готово
+					.sec-page-2__catalog.block-catalog
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="22000" data-brand="Nike" data-size=36,37).product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info NIKE
+								.product-def__cost 22.000 ₽
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="40000" data-brand="Adidas" data-size="36,37,40").product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info Adidas
+								.product-def__cost 40.000 ₽
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="50000" data-brand="Converse" data-size="36,37,45").product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info Converse
+								.product-def__cost 50000 ₽
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="22000" data-brand="New Balance" data-size="44").product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info New Balance
+								.product-def__cost 22.000 ₽
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="22000" data-brand="Nike" data-size="36,37").product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info NIKE
+								.product-def__cost 22.000 ₽
+						.block-catalog__el
+							a(href="./card-product.html" data-cost="22000" data-brand="Nike" data-size="36,37").product-def.product-def_2
+								.product-def__top
+									img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+								.product-def__title Dunk Low WMNS "White / Black"
+								.product-def__info NIKE
+								.product-def__cost 22.000 ₽
+block content
+	+all()

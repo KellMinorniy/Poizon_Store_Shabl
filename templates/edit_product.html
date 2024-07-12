@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование товара</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Мой сайт</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/admin">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/add">Добавить товар</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Редактирование товара</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="alert alert-info">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form id="edit-form" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Фотографии:</label>
+                <div class="photo-fields">
+                    {% for photo in product.photos %}
+                        <div class="form-group">
+                            <img src="{{ url_for('static', filename='photos/' ~ photo.filename) }}" class="img-thumbnail" width="150">
+                            <button type="button" class="btn btn-danger btn-sm remove-photo">Удалить</button>
+                            <input type="hidden" name="existing_photos" value="{{ photo.filename }}">
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" class="btn btn-primary" id="add-photo">Добавить фото</button>
+            </div>
+            <div class="form-group">
+                <label for="manufacturer">Производитель:</label>
+                <input type="text" name="manufacturer" class="form-control" value="{{ product.manufacturer }}">
+            </div>
+            <div class="form-group">
+                <label for="model">Модель:</label>
+                <input type="text" name="model" class="form-control" value="{{ product.model }}">
+            </div>
+            <div class="form-group">
+                <label for="article_number">Артикул товара:</label>
+                <input type="text" name="article_number" class="form-control" value="{{ product.article_number }}">
+            </div>
+            <div class="form-group">
+                <label for="product_cat">Категория товара:</label>
+                <select name="product_cat" class="form-control">
+                    <option value="0" {% if product.product_cat == 0 %}selected{% endif %}>Одежда</option>
+                    <option value="1" {% if product.product_cat == 1 %}selected{% endif %}>Обувь</option>
+                    <option value="2" {% if product.product_cat == 2 %}selected{% endif %}>Аксессуары</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Цена:</label>
+                <input type="text" name="price" class="form-control" value="{{ product.price }}">
+            </div>
+            <div class="form-group">
+                <label>Размеры:</label>
+                <div class="size-fields">
+                    {% for size in product.sizes %}
+                        <div class="form-group">
+                            <input type="text" name="sizes" class="form-control" value="{{ size.size }}">
+                            <button type="button" class="btn btn-danger btn-sm remove-size">Удалить</button>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="button" class="btn btn-primary" id="add-size">Добавить размер</button>
+            </div>
+            <div class="form-group">
+                <label for="crossed_out_price">Зачеркнутая цена:</label>
+                <input type="text" name="crossed_out_price" class="form-control" value="{{ product.crossed_out_price }}">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Сохранить">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add photo field
+            document.getElementById('add-photo').addEventListener('click', function() {
+                var photoFields = document.querySelector('.photo-fields');
+                var newPhotoField = document.createElement('div');
+                newPhotoField.className = 'form-group';
+                newPhotoField.innerHTML = '<input type="file" name="photos" class="form-control">';
+                photoFields.appendChild(newPhotoField);
+            });
+
+            // Remove photo field
+            document.querySelectorAll('.remove-photo').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    this.parentElement.remove();
+                });
+            });
+
+            // Add size field
+            document.getElementById('add-size').addEventListener('click', function() {
+                var sizeFields = document.querySelector('.size-fields');
+                var newSizeField = document.createElement('div');
+                newSizeField.className = 'form-group';
+                newSizeField.innerHTML = '<input type="text" name="sizes" class="form-control"><button type="button" class="btn btn-danger btn-sm remove-size">Удалить</button>';
+                sizeFields.appendChild(newSizeField);
+
+                newSizeField.querySelector('.remove-size').addEventListener('click', function() {
+                    newSizeField.remove();
+                });
+            });
+
+            // Remove size field
+            document.querySelectorAll('.remove-size').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    this.parentElement.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

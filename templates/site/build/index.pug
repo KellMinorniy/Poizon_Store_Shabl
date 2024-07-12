@@ -1,0 +1,339 @@
+extends ./includes/def-layout.pug
+
+block variables
+
+mixin all()
+	section.sec-header
+		.container-def.container-def_2
+			.sec-header__wrap
+				.sec-header__content
+					.sec-header__body
+						h1.sec-header__title.title-def.title-def_main Оригинальные товары от POIZON 
+						.sec-header__descrp.wrap-article.text-info
+							ul
+								li Доставка по всей России бесплатно
+								li Официально зарегистрированное юридическое лицо
+								li Оформление и оплата заказа как в магазине
+								li Только сертифицированные товары из каталога POIZON
+								li Доставили более 10 000 посылок за 3 года
+					img.sec-header__img(src="./img/header.png" alt="")
+	section.sec-cat
+		.container-def.container-def_2
+			.sec-cat__wrap
+				.sec-cat__top.sec-top
+					h2.sec-cat__title.title-def.title-def_sec Категории. <span>Гарантированно оригинальные товары</span>
+					.nav-def
+						.nav-def__arr.nav-def__arr_prev
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.85712 16.1429L1.71426 9L8.85712 1.85714" stroke="#111C38" stroke-width="2" stroke-linecap="round"/></svg>
+						.nav-def__arr.nav-def__arr_next
+							<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.14288 1.85715L8.28574 9L1.14288 16.1429" stroke="#111C38" stroke-width="2" stroke-linecap="round"/></svg>
+		.container-def.container-def_3
+			.sec-cat__content
+				.slider-cat.swiper
+					.swiper-wrapper
+						.slider-cat__el.swiper-slide
+							.slider-cat-el
+								.slider-cat-el__body
+									.slider-cat-el__title.title-text Одежда
+									.slider-cat-el__text.text-info-2 Откройте для себя мир роскоши<br> и качества с одеждой от ведущих мировых брендов: Addidas, Timberland, The North Face и других знаменитых брендов
+									a(href="./catalog.html").slider-cat-el__btn.btn-def
+										span Выбрать
+								img.slider-cat-el__img(loading="lazy" src="./img/cat/1.png" alt="")
+						.slider-cat__el.swiper-slide
+							.slider-cat-el
+								.slider-cat-el__body
+									.slider-cat-el__title.title-text Обувь
+									.slider-cat-el__text.text-info-2 Откройте для себя мир роскоши<br> и качества с одеждой от ведущих мировых брендов: Addidas, Timberland, The North Face и других знаменитых брендов
+									a(href="./catalog.html").slider-cat-el__btn.btn-def
+										span Выбрать
+								img.slider-cat-el__img(loading="lazy" src="./img/cat/2.png" alt="")
+						.slider-cat__el.swiper-slide
+							.slider-cat-el
+								.slider-cat-el__body
+									.slider-cat-el__title.title-text Аксессуары
+									.slider-cat-el__text.text-info-2 Откройте для себя мир роскоши<br> и качества с одеждой от ведущих мировых брендов: Addidas, Timberland, The North Face и других знаменитых брендов
+									a(href="./catalog.html").slider-cat-el__btn.btn-def
+										span Выбрать
+								img.slider-cat-el__img(loading="lazy" src="./img/cat/3.png" alt="")
+	section.sec-products
+		.container-def.container-def_4
+			.sec-products__wrap
+				h2.sec-products__title.title-def.title-def_sec2.center Новые поступления обуви
+				.sec-products__content
+					.products-swiper.swiper
+						.swiper-wrapper
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+						.products-swiper__bottom.acts-swiper
+							.acts-swiper__arr.acts-swiper__arr_prev
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.31624 18C7.87514 17.9999 7.45213 17.8104 7.14027 17.4732L0.486998 10.2821C0.175173 9.94495 0 9.48776 0 9.01105C0 8.53434 0.175173 8.07714 0.486998 7.74001L7.14027 0.548845C7.29371 0.377137 7.47725 0.240177 7.68018 0.145957C7.88311 0.0517366 8.10137 0.0021422 8.32223 6.78793e-05C8.54308 -0.00200644 8.76211 0.0434804 8.96652 0.133875C9.17094 0.224269 9.35665 0.357761 9.51282 0.52656C9.669 0.69536 9.7925 0.896087 9.87614 1.11703C9.95977 1.33797 10.0019 1.5747 9.99994 1.81341C9.99802 2.05212 9.95213 2.28803 9.86496 2.50737C9.77779 2.7267 9.65107 2.92508 9.49221 3.09092L4.0149 9.01105L9.49221 14.9312C9.72476 15.1826 9.88311 15.5029 9.94726 15.8516C10.0114 16.2003 9.97848 16.5617 9.85261 16.8901C9.72675 17.2186 9.51361 17.4993 9.24014 17.6969C8.96668 17.8944 8.64516 17.9999 8.31624 18Z" fill="#1F2A37"/></svg>
+							.acts-swiper__text
+								span.acts-swiper__text-from 1
+								span /
+								span.acts-swiper__text-to 9
+							.acts-swiper__arr.acts-swiper__arr_next
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.68376 18C1.35484 17.9999 1.03332 17.8944 0.759855 17.6969C0.486389 17.4993 0.273251 17.2186 0.147387 16.8901C0.0215237 16.5617 -0.0114139 16.2003 0.0527363 15.8516C0.116886 15.5029 0.275245 15.1826 0.507793 14.9312L5.9851 9.01105L0.507793 3.09092C0.348929 2.92508 0.222213 2.7267 0.13504 2.50737C0.0478668 2.28803 0.00198196 2.05212 6.27998e-05 1.81341C-0.00185637 1.5747 0.0402297 1.33797 0.123863 1.11703C0.207496 0.896087 0.331003 0.69536 0.487176 0.52656C0.64335 0.357761 0.829062 0.224269 1.03348 0.133875C1.23789 0.0434804 1.45692 -0.00200644 1.67777 6.78793e-05C1.89863 0.0021422 2.11689 0.0517366 2.31982 0.145957C2.52275 0.240177 2.70629 0.377137 2.85973 0.548845L9.513 7.74001C9.82483 8.07714 10 8.53434 10 9.01105C10 9.48776 9.82483 9.94495 9.513 10.2821L2.85973 17.4732C2.54787 17.8104 2.12486 17.9999 1.68376 18Z" fill="#1F2A37"/></svg>
+					.sec-products__bottom.center
+						a(href="./catalog.html").sec-products__btn.btn-black
+							span Посмотреть все
+	section.sec-products
+		.container-def.container-def_4
+			.sec-products__wrap
+				h2.sec-products__title.title-def.title-def_sec2.center Новые поступления одежды
+				.sec-products__content
+					.products-swiper.swiper
+						.swiper-wrapper
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+						.products-swiper__bottom.acts-swiper
+							.acts-swiper__arr.acts-swiper__arr_prev
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.31624 18C7.87514 17.9999 7.45213 17.8104 7.14027 17.4732L0.486998 10.2821C0.175173 9.94495 0 9.48776 0 9.01105C0 8.53434 0.175173 8.07714 0.486998 7.74001L7.14027 0.548845C7.29371 0.377137 7.47725 0.240177 7.68018 0.145957C7.88311 0.0517366 8.10137 0.0021422 8.32223 6.78793e-05C8.54308 -0.00200644 8.76211 0.0434804 8.96652 0.133875C9.17094 0.224269 9.35665 0.357761 9.51282 0.52656C9.669 0.69536 9.7925 0.896087 9.87614 1.11703C9.95977 1.33797 10.0019 1.5747 9.99994 1.81341C9.99802 2.05212 9.95213 2.28803 9.86496 2.50737C9.77779 2.7267 9.65107 2.92508 9.49221 3.09092L4.0149 9.01105L9.49221 14.9312C9.72476 15.1826 9.88311 15.5029 9.94726 15.8516C10.0114 16.2003 9.97848 16.5617 9.85261 16.8901C9.72675 17.2186 9.51361 17.4993 9.24014 17.6969C8.96668 17.8944 8.64516 17.9999 8.31624 18Z" fill="#1F2A37"/></svg>
+							.acts-swiper__text
+								span.acts-swiper__text-from 1
+								span /
+								span.acts-swiper__text-to 9
+							.acts-swiper__arr.acts-swiper__arr_next
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.68376 18C1.35484 17.9999 1.03332 17.8944 0.759855 17.6969C0.486389 17.4993 0.273251 17.2186 0.147387 16.8901C0.0215237 16.5617 -0.0114139 16.2003 0.0527363 15.8516C0.116886 15.5029 0.275245 15.1826 0.507793 14.9312L5.9851 9.01105L0.507793 3.09092C0.348929 2.92508 0.222213 2.7267 0.13504 2.50737C0.0478668 2.28803 0.00198196 2.05212 6.27998e-05 1.81341C-0.00185637 1.5747 0.0402297 1.33797 0.123863 1.11703C0.207496 0.896087 0.331003 0.69536 0.487176 0.52656C0.64335 0.357761 0.829062 0.224269 1.03348 0.133875C1.23789 0.0434804 1.45692 -0.00200644 1.67777 6.78793e-05C1.89863 0.0021422 2.11689 0.0517366 2.31982 0.145957C2.52275 0.240177 2.70629 0.377137 2.85973 0.548845L9.513 7.74001C9.82483 8.07714 10 8.53434 10 9.01105C10 9.48776 9.82483 9.94495 9.513 10.2821L2.85973 17.4732C2.54787 17.8104 2.12486 17.9999 1.68376 18Z" fill="#1F2A37"/></svg>
+					.sec-products__bottom.center
+						a(href="./catalog.html").sec-products__btn.btn-black
+							span Посмотреть все
+	section.sec-products
+		.container-def.container-def_4
+			.sec-products__wrap
+				h2.sec-products__title.title-def.title-def_sec2.center Новые поступления аксессуары
+				.sec-products__content
+					.products-swiper.swiper
+						.swiper-wrapper
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/1.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High OG "Yellow Ochre"
+									.product-def__info NIKE
+									.product-def__cost 27.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/2.jpg" alt="")
+									.product-def__title Leather Pocket Bag "Black"
+									.product-def__info Miu Miu
+									.product-def__cost 320.000 ₽ 
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/3.jpg" alt="")
+									.product-def__title Air Jordan 1 Retro High  "Shattered Backboard 3.0"
+									.product-def__info NIKE
+									.product-def__cost 50.000 ₽
+							.swiper-slide.products-swiper__el
+								a(href="./card-product.html").product-def
+									.product-def__top
+										img.product-def__img(loading="lazy" src="./img/product/4.jpg" alt="")
+									.product-def__title Scroll Logo Sweatpants "Black"
+									.product-def__info CHROME HEARTS
+									.product-def__cost 127.000 ₽
+						.products-swiper__bottom.acts-swiper
+							.acts-swiper__arr.acts-swiper__arr_prev
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.31624 18C7.87514 17.9999 7.45213 17.8104 7.14027 17.4732L0.486998 10.2821C0.175173 9.94495 0 9.48776 0 9.01105C0 8.53434 0.175173 8.07714 0.486998 7.74001L7.14027 0.548845C7.29371 0.377137 7.47725 0.240177 7.68018 0.145957C7.88311 0.0517366 8.10137 0.0021422 8.32223 6.78793e-05C8.54308 -0.00200644 8.76211 0.0434804 8.96652 0.133875C9.17094 0.224269 9.35665 0.357761 9.51282 0.52656C9.669 0.69536 9.7925 0.896087 9.87614 1.11703C9.95977 1.33797 10.0019 1.5747 9.99994 1.81341C9.99802 2.05212 9.95213 2.28803 9.86496 2.50737C9.77779 2.7267 9.65107 2.92508 9.49221 3.09092L4.0149 9.01105L9.49221 14.9312C9.72476 15.1826 9.88311 15.5029 9.94726 15.8516C10.0114 16.2003 9.97848 16.5617 9.85261 16.8901C9.72675 17.2186 9.51361 17.4993 9.24014 17.6969C8.96668 17.8944 8.64516 17.9999 8.31624 18Z" fill="#1F2A37"/></svg>
+							.acts-swiper__text
+								span.acts-swiper__text-from 1
+								span /
+								span.acts-swiper__text-to 9
+							.acts-swiper__arr.acts-swiper__arr_next
+								<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.68376 18C1.35484 17.9999 1.03332 17.8944 0.759855 17.6969C0.486389 17.4993 0.273251 17.2186 0.147387 16.8901C0.0215237 16.5617 -0.0114139 16.2003 0.0527363 15.8516C0.116886 15.5029 0.275245 15.1826 0.507793 14.9312L5.9851 9.01105L0.507793 3.09092C0.348929 2.92508 0.222213 2.7267 0.13504 2.50737C0.0478668 2.28803 0.00198196 2.05212 6.27998e-05 1.81341C-0.00185637 1.5747 0.0402297 1.33797 0.123863 1.11703C0.207496 0.896087 0.331003 0.69536 0.487176 0.52656C0.64335 0.357761 0.829062 0.224269 1.03348 0.133875C1.23789 0.0434804 1.45692 -0.00200644 1.67777 6.78793e-05C1.89863 0.0021422 2.11689 0.0517366 2.31982 0.145957C2.52275 0.240177 2.70629 0.377137 2.85973 0.548845L9.513 7.74001C9.82483 8.07714 10 8.53434 10 9.01105C10 9.48776 9.82483 9.94495 9.513 10.2821L2.85973 17.4732C2.54787 17.8104 2.12486 17.9999 1.68376 18Z" fill="#1F2A37"/></svg>
+					.sec-products__bottom.center
+						a(href="./catalog.html").sec-products__btn.btn-black
+							span Посмотреть все
+	section.sec-info#sec-calc
+		.container-def.container-def_4
+			.sec-info__wrap
+				.sec-info__content
+					.sec-info__calc.info-calc
+						.info-calc__title.title-def.title-def_med Рассчитай стоимость заказа прямо на сайте
+						.info-calc__acts.block-calc
+							input(type="text" placeholder="Цена на товар в юанях").info-calc__btn.inp-calc.block-calc__inp
+							.wrap-btns
+								a.wrap-btns__btn.btn-blue.block-calc__btn(href="#")
+									span Обувь
+								a.btn-icon.block-calc__btn-next(href="#")
+									<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.00002 1L8 7.99997L1.00002 15" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/><path d="M8.00002 1L15 7.99997L8.00002 15" stroke="white" stroke-width="1.5"/></svg>
+						.info-calc__bottom
+							.info-calc__bottom-title.title-def.title-def_med2 Итоговая стоимость: <strong><span class="block-calc__val">3500</span>₽</strong>
+							.info-calc__bottom-text С учётом доставки
+					.sec-info__qr.info-qr
+						.info-qr__wrap
+							<svg class="info-qr__dec" width="184" height="34" viewBox="0 0 184 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M115 0H11.1974L0 19.5575L28.75 34V19.5575H115V0Z" fill="#D0EFEF" fill-opacity="0.4"/><path d="M215 0H11.1974L0 20H19.8224H215V0Z" fill="#D0EFEF"/></svg>
+							img.info-qr__img(loading="lazy" src="./img/info-qr.png" alt="")
+							.info-qr__gift
+								<svg width="87" height="88" viewBox="0 0 87 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M72.7654 27.4691L84.372 48.3347C88.6472 56.0202 85.8849 65.7077 78.1994 69.9828L50.3786 85.4584C42.6932 89.7336 33.0056 86.9713 28.7305 79.2858L17.1238 58.4202C16.0598 56.5075 16.7543 54.0721 18.6669 53.0082L25.5178 49.1973C27.4305 48.1334 29.8659 48.8278 30.9298 50.7405L37.004 61.6601C38.4355 64.2336 41.1767 65.8052 44.1142 65.765C45.4323 65.7604 46.6998 65.4196 47.8474 64.7812C49.1689 64.0461 50.2776 62.9285 50.9997 61.5251L53.104 57.5312L57.3056 57.8807C60.2201 58.1265 63.0293 56.7915 64.6127 54.317C66.2309 51.8231 66.3606 48.6999 64.9098 46.0917L58.855 35.2069C57.791 33.2942 58.4854 30.8588 60.3981 29.7948L67.3533 25.9259C69.266 24.862 71.7014 25.5564 72.7654 27.4691Z" fill="#A5DDDF"/><path d="M68.3095 7.17946L70.244 10.6571C72.3719 14.4824 72.2697 18.6375 67.1577 21.4812L14.9937 50.4979C9.67295 53.4576 6.29748 51.2369 4.16958 47.4116L2.23514 43.934C0.107244 40.1086 0.000712976 36.0696 5.32144 33.1099L57.4854 4.09316C62.5975 1.24952 66.1816 3.3541 68.3095 7.17946Z" fill="#A5DDDF"/><path d="M30.1515 19.2978L10.9552 29.9759C9.05702 29.3469 7.98917 27.3453 8.5447 25.397L10.736 17.7119C11.3069 15.7094 13.4283 14.5294 15.4307 15.1004L30.1515 19.2978Z" fill="#A5DDDF"/><path d="M51.8169 7.24595L32.6206 17.9241L36.818 3.20334C37.3889 1.20088 39.5103 0.0208667 41.5127 0.591833L49.1978 2.78311C51.1462 3.33864 52.2836 5.30153 51.8169 7.24595Z" fill="#A5DDDF"/><path d="M49.861 35.6562C51.7737 34.5923 54.2091 35.2867 55.273 37.1994L61.3278 48.0842C62.8754 50.8663 60.7089 54.2572 57.5432 53.969L53.2527 53.6235C51.6795 53.4968 50.1841 54.3286 49.4273 55.7514L47.3577 59.7259C45.9136 62.5327 41.9248 62.5658 40.3966 59.8185L34.3031 48.8641C33.2392 46.9514 33.9336 44.516 35.8463 43.452L49.861 35.6562Z" fill="#A5DDDF"/></svg>
+							.info-qr__gift2
+								<svg width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M33.9358 27.4861L29.0023 38.0066C27.1852 41.8816 22.5747 43.5484 18.6997 41.7313L4.67231 35.1533C0.797251 33.3361 -0.869544 28.7257 0.947626 24.8506L5.88112 14.3301C6.33336 13.3657 7.49241 12.9467 8.45679 13.3989L11.911 15.0187C12.8754 15.471 13.2944 16.63 12.8422 17.5944L10.2603 23.1001C9.65187 24.3977 9.81164 25.9271 10.6636 27.0753C11.0405 27.5943 11.5358 27.9977 12.1145 28.269C12.7808 28.5815 13.5375 28.701 14.297 28.5866L16.4726 28.2807L17.5304 30.0388C18.2629 31.2592 19.5895 31.9882 21.017 31.909C22.462 31.838 23.7318 31.0003 24.3485 29.6853L26.9222 24.1971C27.3744 23.2327 28.5334 22.8137 29.4978 23.2659L33.0047 24.9104C33.969 25.3626 34.3881 26.5217 33.9358 27.4861Z" fill="#F9FFFF"/><path d="M40.6771 19.9521L39.8549 21.7055C38.9504 23.6343 37.2811 24.7765 34.7035 23.5678L8.40225 11.2341C5.71952 9.97606 5.63543 8.01153 6.53991 6.08277L7.36216 4.32935C8.26663 2.40059 9.83076 1.20897 12.5135 2.46701L38.8148 14.8007C41.3923 16.0094 41.5816 18.0233 40.6771 19.9521Z" fill="#F9FFFF"/><path d="M25.0329 8.33822L15.3541 3.7994C15.0621 2.87107 15.5483 1.87984 16.4756 1.54462L20.133 0.222362C21.086 -0.122171 22.1556 0.379401 22.5001 1.3324L25.0329 8.33822Z" fill="#F9FFFF"/><path d="M35.9567 13.4607L26.2779 8.92189L33.2837 6.38911C34.2367 6.04457 35.3063 6.54615 35.6508 7.49914L36.9731 11.1566C37.3083 12.0838 36.8571 13.0915 35.9567 13.4607Z" fill="#F9FFFF"/><path d="M24.1849 20.7746C25.1493 21.2268 25.5683 22.3859 25.1161 23.3503L22.5425 28.8385C21.8847 30.2412 19.9294 30.351 19.1422 29.0193L18.0575 27.2272C17.6597 26.5701 16.9058 26.2166 16.1287 26.3228L13.9707 26.637C12.4517 26.8658 11.3033 25.3006 11.9529 23.9154L14.543 18.3921C14.9952 17.4277 16.1543 17.0087 17.1187 17.4609L24.1849 20.7746Z" fill="#F9FFFF"/></svg>
+							.info-qr__content
+								h2.info-qr__title.title-def.title-def_sec.text-white Подходит цена?<br> - скорее заказывай!
+								.info-qr__text Выбирайте товары в POZION или покупайте прямо с нашего склада в Москве
+								.info-qr__qr.qr-def
+									.qr-def__dec.logo-min
+										img.logo-min__img(src="./img/logo.svg" alt="")
+									img.qr-def__img(src="./img/qr.svg" alt="")
+						a(href="https://t.me/+eMhI8MrjiDA4Zjg0" target="_blank").info-qr__btn.btn-def-2
+							span Сделать заказ
+							<svg class="btn-def-2__arr" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2568 0.189209C4.97013 0.189209 0.662155 4.49718 0.662155 9.7838C0.662155 15.0704 4.97013 19.3784 10.2568 19.3784C15.5434 19.3784 19.8513 15.0704 19.8513 9.7838C19.8513 4.49718 15.5434 0.189209 10.2568 0.189209ZM12.9336 10.2923L9.54675 13.6792C9.40283 13.8231 9.22053 13.8903 9.03824 13.8903C8.85594 13.8903 8.67364 13.8231 8.52972 13.6792C8.25148 13.401 8.25148 12.9404 8.52972 12.6622L11.4081 9.7838L8.52972 6.90543C8.25148 6.62718 8.25148 6.16664 8.52972 5.8884C8.80797 5.61016 9.26851 5.61016 9.54675 5.8884L12.9336 9.27529C13.2215 9.55353 13.2215 10.0141 12.9336 10.2923Z" fill="white"/></svg>
+block content
+	+all()
